@@ -14,7 +14,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="nbr-logo">
-                <h1> <a href="index.html">zapamietaneswiatlem<span>.</span>pl</a> </h1>
+                <h1> <a href="<?= SITE_URL; ?>">zapamietaneswiatlem<span>.</span>pl</a> </h1>
                 <!-- use for logo img code: <img src="img/logo.svg" alt="logo"> -->
             </div>
             <!-- Hamburger Menu -->

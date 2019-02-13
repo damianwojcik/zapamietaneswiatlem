@@ -21,7 +21,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="copright">2019 © Asia Felicia. All rights reserved.</p>
+                    <p class="copright">2019 © <a href="http://dwojcik.pro/">dwojcik.pro</a>. All rights reserved.</p>
                 </div>
             </div>
         </div>

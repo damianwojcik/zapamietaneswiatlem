@@ -2,29 +2,51 @@
 
 <?php get_header(); ?>
 
+<?php
+if( have_rows('section_intro') ):
+    while ( have_rows('section_intro') ) : the_row();
+        $photo = get_sub_field('photo');
+?>
     <!-- Background Image -->
     <div class="nbr-background-img-section">
         <div class="nbr-profile-info">
             <div class="d-flex align-items-center w-100">
                 <div class="mx-auto nbr-profile-inner">
-                    <h2>Wioletta Łabno<b>.</b><span>Fotograf<b>&amp;</b> Designer</span></h2>
+                    <h2>
+                        <?php the_sub_field('heading'); ?>
+                        <span><?php the_sub_field('description'); ?></span>
+                    </h2>
                 </div>
             </div>
         </div>
         <div class="nbr-background-wrap">
-            <div class="background-img-item" style="background-image: url('img/slider.png');"></div>
+            <div class="background-img-item" style="background-image: url('<?php echo $photo['url']; ?>');"></div>
         </div>
     </div>
+<?php
+    endwhile;
+else :
+endif;
+?>
 
+<?php
+if( have_rows('section_introduction') ):
+    while ( have_rows('section_introduction') ) : the_row();
+?>
     <!-- About Me -->
     <section class="nbr-about-section-home">
         <div class="container">
             <div class="nbr-about-content text-center">
-                <p>Hey, I'm Asia Felicia and <strong>I am a designer & developer</strong><br> who dream making the world a better place<br> by creating captivating products.</p>
-                <span>Asia Felicia.</span>
+                <?php the_sub_field('content'); ?>
+                <span><?php the_sub_field('signature'); ?></span>
             </div>
         </div>
     </section>
+<?php
+    endwhile;
+else :
+endif;
+?>
 
     <!-- Portfolio -->
     <section class="nbr-homepage-portfolio-section">

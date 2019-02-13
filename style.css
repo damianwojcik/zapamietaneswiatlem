@@ -1443,6 +1443,14 @@ span.user {
     margin: 0;
 }
 
+.nbr-footer-section p a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nbr-footer-section p a:hover {
+    color: #E9204F;
+}
+
 
 /*** 18. Media Query ***/
 
