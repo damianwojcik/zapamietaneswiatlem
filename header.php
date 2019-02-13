@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-	<!-- Basic Page Needs
-	================================================== -->
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php wp_title(); ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-	<!-- CSS
-	================================================== -->
-	<link rel="stylesheet" href="<?= THEME_URL; ?>/assets/css/base.css">
-	<link rel="stylesheet" href="<?= THEME_URL; ?>/assets/css/gridset.css">
-	<link rel="stylesheet" href="<?= THEME_URL; ?>/style.css">
-	<link rel="stylesheet" href="<?= THEME_URL; ?>/assets/css/responsive.css">
-
-
-	<!-- JS
-	================================================== -->
-	<?php wp_enqueue_script("jquery"); ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- TODO: favicon -->
 	<?php wp_head(); ?>
-	<script src="/js/scripts.js"></script>
-
-
-	<!-- HTML 5 SUPPORT
-	================================================== -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-
 </head>
 <body <?php body_class(); ?>>
 
-	
+    <!-- Header -->
+    <header id="header" class="nbr-header-section">
+        <div class="container">
+            <!-- Logo -->
+            <div class="nbr-logo">
+                <h1> <a href="index.html">zapamietaneswiatlem<span>.</span>pl</a> </h1>
+                <!-- use for logo img code: <img src="img/logo.svg" alt="logo"> -->
+            </div>
+            <!-- Hamburger Menu -->
+            <div class="nbr-hamburger-menu" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+         </div>
+    </header>
+
+    <!-- Navigation Overlay -->
+    <div class="nbr-overlay" id="nbr-overlay">
+        <nav class="nbr-overlay-menu d-flex align-items-center">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
