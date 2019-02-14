@@ -1285,6 +1285,10 @@ span.user {
     outline: none;
 }
 
+.nbr-contact-form .form-control.wpcf7-not-valid {
+    border-color: #E9204F;
+}
+
 .nbr-contact-form:focus,
 .form-control:focus {
     border-bottom-width: 2px;
@@ -1308,6 +1312,10 @@ span.user {
 #form-messages.alert-danger,
 #form-messages.alert-success {
     display: block;
+}
+
+.wpcf7-not-valid-tip {
+    display: none !important;
 }
 
 

@@ -59,24 +59,7 @@
                     <div class="nbr-contact-form">
                         <h3>Wanna Work Together?</h3>
                         <p>Qualamy nisl sodales sit amet sapien id, placerat sodales oiter. Vivamus nec magna rhoncus felis, faucibus printy.</p>
-                        <form action="#" method="post" class="form-horizontal">
-                            <div class="form-group colum-row row">
-                                <div class="col-sm-6">
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Name" required> </div>
-                                <div class="col-sm-6">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required> </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Message" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <button class="nbr-btn2" type="submit">Say Hello</button>
-                                </div>
-                            </div>
-                        </form>
+                        <?php echo do_shortcode( '[contact-form-7 id="69" title="Formularz kontaktowy" html_class="form-horizontal"]' ); ?>
                     </div>
                 </div>
             </div>
