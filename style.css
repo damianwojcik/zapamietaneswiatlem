@@ -1222,6 +1222,10 @@ span.user {
 
 /*** 16. Contact style ***/
 
+#coords {
+    display: none;
+}
+
 #nbr-contactMap {
     width: 100%;
     height: 450px;

@@ -2,12 +2,12 @@
 
 <?php get_header(); ?>
 
-<?php
-if( have_rows('section_intro') ):
-    while ( have_rows('section_intro') ) : the_row();
-        $photo = get_sub_field('photo');
-?>
     <!-- Background Image -->
+    <?php
+    if( have_rows('section_intro') ):
+        while ( have_rows('section_intro') ) : the_row();
+            $photo = get_sub_field('photo');
+    ?>
     <div class="nbr-background-img-section">
         <div class="nbr-profile-info">
             <div class="d-flex align-items-center w-100">
@@ -23,17 +23,17 @@ if( have_rows('section_intro') ):
             <div class="background-img-item" style="background-image: url('<?php echo $photo['url']; ?>');"></div>
         </div>
     </div>
-<?php
-    endwhile;
-else :
-endif;
-?>
+    <?php
+        endwhile;
+    else :
+    endif;
+    ?>
 
-<?php
-if( have_rows('section_introduction') ):
-    while ( have_rows('section_introduction') ) : the_row();
-?>
     <!-- About Me -->
+    <?php
+    if( have_rows('section_introduction') ):
+        while ( have_rows('section_introduction') ) : the_row();
+    ?>
     <section class="nbr-about-section-home">
         <div class="container">
             <div class="nbr-about-content text-center">
@@ -42,11 +42,11 @@ if( have_rows('section_introduction') ):
             </div>
         </div>
     </section>
-<?php
-    endwhile;
-else :
-endif;
-?>
+    <?php
+        endwhile;
+    else :
+    endif;
+    ?>
 
     <!-- Portfolio -->
     <section class="nbr-homepage-portfolio-section">
