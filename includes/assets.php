@@ -24,3 +24,5 @@ function enqueue_scripts() {
     wp_enqueue_script( 'google_map_api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBMea0kc6KmE8P7ai1RGRJJaQKhsqfyjpA', '', NULL);
     wp_enqueue_script( 'site_scripts', THEME_URL . '/assets/js/scripts.js', '', NULL);
 }
+
+?>

@@ -11,3 +11,4 @@
 	show_admin_bar(false);
 
 	include("includes/assets.php");
+	include("includes/acf.php");
