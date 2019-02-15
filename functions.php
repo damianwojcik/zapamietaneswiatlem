@@ -8,6 +8,8 @@
 	add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 	add_action( 'wp_footer', 'enqueue_scripts' );
 
+	add_image_size( 'post-thumb', 745, 400 );
+
 	show_admin_bar(false);
 
 	include("includes/assets.php");

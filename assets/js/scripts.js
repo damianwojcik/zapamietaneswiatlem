@@ -78,7 +78,12 @@ google.maps.event.addDomListener(window, 'load', init);
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+    var wrapper = document.getElementById('nbr-contactMap');
+
+    if (!wrapper) return;
+
     var coords = document.querySelector('#coords').textContent.split(' ');
+
     var mapOptions = {
         zoom: 13,
         center: new google.maps.LatLng(coords[0], coords[1]),
