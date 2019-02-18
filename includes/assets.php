@@ -1,8 +1,5 @@
 <?php
 
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'menus' );
-
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 add_action( 'wp_footer', 'enqueue_scripts' );
 

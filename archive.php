@@ -27,7 +27,7 @@
 
             <div class="col-md-6">
                 <div class="nbr-blog-post">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt=""></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php echo $title; ?>"></a>
                     <div class="nbr-blog-content">
                         <p class="nbr-date-user">
                             <span class="date"><i class="ti-time"></i> <?php echo $date; ?></span>

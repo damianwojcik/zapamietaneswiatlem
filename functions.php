@@ -1,6 +1,6 @@
 <?php
-	define("THEME_URL", get_stylesheet_directory_uri());
-	define("SITE_URL", site_url());
+	define('THEME_URL', get_stylesheet_directory_uri());
+	define('SITE_URL', site_url());
 
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'menus' );
@@ -15,5 +15,6 @@
 
 	show_admin_bar(false);
 
-	include("includes/assets.php");
-	include("includes/acf.php");
+	include( 'includes/assets.php' );
+	include( 'includes/acf.php' );
+	include( 'includes/helpers.php' );
