@@ -1,16 +1,7 @@
 <?php get_header(); ?>
 
     <!-- Title Header -->
-    <section class="nbr-page-section">
-        <div class="container">
-            <div class="col-md-8 offset-md-2">
-                <div class="nbr-page-content text-center">
-                    <h2><?php the_field('blog_heading', 'option'); ?></h2>
-                    <p><?php the_field('blog_subheading', 'option'); ?></p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php get_template_part("partials/section", "title"); ?>
 
     <!-- Blog Section -->
     <section class="nbr-blog-section">

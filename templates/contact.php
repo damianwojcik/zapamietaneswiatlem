@@ -3,25 +3,7 @@
 <?php get_header(); ?>
 
     <!-- Title Header -->
-    <?php
-    if( have_rows('section_title') ):
-        while ( have_rows('section_title') ) : the_row();
-    ?>
-    <section class="nbr-page-section">
-        <div class="container">
-            <div class="col-md-8 offset-md-2">
-                <div class="nbr-page-content text-center">
-                    <h2><?php the_sub_field('title_heading'); ?></h2>
-                    <p><?php the_sub_field('title_subheading'); ?></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php
-        endwhile;
-    else :
-    endif;
-    ?>
+    <?php get_template_part("partials/section", "title"); ?>
 
     <!-- Contact Section -->
     <section class="nbr-contact-section">
@@ -79,6 +61,5 @@
             </div>
         </div>
     </section>
-
 
 <?php get_footer(); ?>
