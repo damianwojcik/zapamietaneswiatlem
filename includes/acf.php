@@ -30,6 +30,12 @@ if( function_exists('acf_add_options_page') ) {
         'parent_slug'	=> 'page-options',
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Rekomendacje',
+        'menu_title'	=> 'Rekomendacje',
+        'parent_slug'	=> 'page-options',
+    ));
+
 }
 
 ?>

@@ -24,27 +24,7 @@
         </div>
     </section>
 
-    <!-- Testimional -->
-    <section id="testimonial" class="nbr-testimonial-section">
-        <div class="container">
-            <ul id="testimonial-carousel" class="testimonial-items owl-carousel">
-                <li class="testimonial-item">
-                    <i class="fa fa-quote-left"></i>
-                    <p>If you do good work for good clients,<br />it will lead to other good work for<br />other good clients.</p>
-                    <h4>J. Anna / HR Manager</h4>
-                </li>
-                <li class="testimonial-item">
-                    <i class="fa fa-quote-left"></i>
-                    <p>If you do good work for good clients,<br />it will lead to other good work for<br />other good clients.</p>
-                    <h4>Q. Brown / SLCM Manager</h4>
-                </li>
-                <li class="testimonial-item">
-                    <i class="fa fa-quote-left"></i>
-                    <p>If you do good work for good clients,<br />it will lead to other good work for<br />other good clients.</p>
-                    <h4>A. Emily / MM Manager</h4>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <!-- Section Testimonials -->
+    <?php get_template_part("partials/section", "testimonials"); ?>
 
 <?php get_footer(); ?>
