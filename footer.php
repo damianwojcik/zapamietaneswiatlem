@@ -3,8 +3,11 @@
     $logo_img = get_field('logo_img', 'option');
 ?>
 
-        <!-- Footer -->
-        <footer class="nbr-footer-section text-center">
+        </div><!-- /.barba-container -->
+    </div><!-- /#barba-wrapper -->
+
+    <!-- Footer -->
+    <footer class="nbr-footer-section text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">

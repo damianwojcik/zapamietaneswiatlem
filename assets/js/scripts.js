@@ -1,26 +1,16 @@
 jQuery(document).ready(function() {
     headerLinksHandler();
-    menuClickHandler();
     handleOverlay();
     initIsotope();
     initTestimonialCarousel();
     initGoogleMap();
-    // initBarba();
+    initBarba();
 
     function headerLinksHandler() {
         jQuery("#toggle").click(function() {
             jQuery(this).toggleClass("active");
             jQuery("#nbr-overlay").toggleClass("open");
             jQuery(".nbr-header-section").toggleClass("nbr-menu-active");
-        });
-    }
-
-    function menuClickHandler() {
-        jQuery(".nbr-hamburger-menu a").click(function() {
-            jQuery(".nbr-overlay").fadeToggle(200);
-            jQuery(this)
-                .toggleClass("nbr-overlay.open")
-                .toggleClass("nbr-overlay.close");
         });
     }
 
@@ -234,6 +224,43 @@ jQuery(document).ready(function() {
     }
 
     function initBarba() {
+        var FadeTransition = Barba.BaseTransition.extend({
+            start: function() {
+                Promise.all([this.newContainerLoading, this.fadeOut()]).then(
+                    this.fadeIn.bind(this)
+                );
+            },
+
+            fadeOut: function() {
+                return jQuery(this.oldContainer)
+                    .animate({ opacity: 0 })
+                    .promise();
+            },
+
+            fadeIn: function() {
+                var _this = this;
+                var jQueryel = jQuery(this.newContainer);
+
+                jQuery(this.oldContainer).hide();
+
+                jQueryel.css({
+                    visibility: "visible",
+                    opacity: 0
+                });
+
+                jQueryel.animate({ opacity: 1 }, 400, function() {
+                    _this.done();
+                });
+            }
+        });
+        Barba.Pjax.getTransition = function() {
+            return FadeTransition;
+        };
+        Barba.Dispatcher.on('linkClicked', function(currentStatus, oldStatus, container) {
+            jQuery("#toggle").removeClass("active");
+            jQuery("#nbr-overlay").removeClass("open");
+            jQuery(".nbr-header-section").removeClass("nbr-menu-active");
+        });
         Barba.Pjax.start();
     }
 });
