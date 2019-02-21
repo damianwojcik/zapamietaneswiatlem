@@ -223,6 +223,22 @@ jQuery(document).ready(function() {
         });
     }
 
+    function initLightbox () {
+        lightbox.option({
+            'resizeDuration': 300,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'albumLabel': 'Zdjęcie %1 z %2',
+        });
+        var lightboxLinks = document.querySelectorAll('.wp-block-gallery a');
+        if (lightboxLinks.length > 0) {
+            lightboxLinks.forEach(function(item) {
+                item.classList.add('no-barba');
+                item.dataset.lightbox = "gallery";
+            });
+        }
+    }
+
     function initBarba() {
         var FadeTransition = Barba.BaseTransition.extend({
             start: function() {
@@ -230,13 +246,11 @@ jQuery(document).ready(function() {
                     this.fadeIn.bind(this)
                 );
             },
-
             fadeOut: function() {
                 return jQuery(this.oldContainer)
                     .animate({ opacity: 0 })
                     .promise();
             },
-
             fadeIn: function() {
                 var _this = this;
                 var jQueryel = jQuery(this.newContainer);
@@ -256,10 +270,13 @@ jQuery(document).ready(function() {
         Barba.Pjax.getTransition = function() {
             return FadeTransition;
         };
-        Barba.Dispatcher.on('linkClicked', function(currentStatus, oldStatus, container) {
+        Barba.Dispatcher.on('linkClicked', function() {
             jQuery("#toggle").removeClass("active");
             jQuery("#nbr-overlay").removeClass("open");
             jQuery(".nbr-header-section").removeClass("nbr-menu-active");
+        });
+        Barba.Dispatcher.on('newPageReady', function() {
+            initLightbox();
         });
         Barba.Pjax.start();
     }

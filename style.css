@@ -993,6 +993,10 @@ span.user {
     padding-bottom: 40px;
 }
 
+.nbr-single-post .entry-thumb img {
+    max-height: 500px;
+}
+
 .nbr-single-post h2 {
     font-weight: 600;
     margin: 0 0 5px;

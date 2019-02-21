@@ -9,6 +9,7 @@ function enqueue_styles() {
     wp_enqueue_style( 'themify_icons', THEME_URL .'/assets/css/themify-icons.css', '', NULL);
     wp_enqueue_style( 'bootstrap', THEME_URL .'/assets/css/bootstrap.min.css', '', NULL);
     wp_enqueue_style( 'owl_carousel', THEME_URL .'/assets/css/owl.carousel.css', '', NULL);
+    wp_enqueue_style( 'lightbox', THEME_URL .'/assets/css/lightbox.min.css', '', NULL);
     wp_enqueue_style( 'site_styles', THEME_URL .'/style.css', '', NULL);
 }
 
@@ -18,6 +19,7 @@ function enqueue_scripts() {
     wp_enqueue_script( 'owl_carousel', THEME_URL . '/assets/js/vendor/owl.carousel.min.js', '', NULL);
     wp_enqueue_script( 'imagesloaded', THEME_URL . '/assets/js/vendor/imagesloaded.pkgd.min.js', '', NULL);
     wp_enqueue_script( 'isotope', THEME_URL . '/assets/js/vendor/jquery.isotope.v3.0.2.js', '', NULL);
+    wp_enqueue_script( 'lightbox', THEME_URL . '/assets/js/vendor/lightbox.min.js', '', NULL);
     wp_enqueue_script( 'barbajs', 'https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js', '', NULL);
     wp_enqueue_script( 'google_map_api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBMea0kc6KmE8P7ai1RGRJJaQKhsqfyjpA', '', NULL);
     wp_enqueue_script( 'site_scripts', THEME_URL . '/assets/js/scripts.js', '', NULL);
