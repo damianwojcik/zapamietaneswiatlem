@@ -25,6 +25,10 @@ jQuery(document).ready(function() {
     }
 
     function initIsotope() {
+        var wrapper = document.querySelector(".nbr-homepage-portfolio-section");
+
+        if (!wrapper) return;
+
         jQuery(".nbr-portfolio-items").imagesLoaded(function() {
             jQuery(".nbr-portfolio-filter li").on("click", function() {
                 jQuery(".nbr-portfolio-filter li").removeClass("active");
@@ -48,6 +52,10 @@ jQuery(document).ready(function() {
     }
 
     function initTestimonialCarousel() {
+        var wrapper = document.querySelector("#testimonial-carousel");
+
+        if (!wrapper) return;
+
         jQuery("#testimonial-carousel").owlCarousel({
             loop: true,
             autoplay: true,
@@ -277,6 +285,9 @@ jQuery(document).ready(function() {
         });
         Barba.Dispatcher.on('newPageReady', function() {
             initLightbox();
+            initGoogleMap();
+            initIsotope();
+            initTestimonialCarousel();
         });
         Barba.Pjax.start();
     }
