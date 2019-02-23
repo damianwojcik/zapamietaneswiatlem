@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function() {
     headerLinksHandler();
     handleOverlay();
@@ -264,6 +265,7 @@ jQuery(document).ready(function() {
                 var jQueryel = jQuery(this.newContainer);
 
                 jQuery(this.oldContainer).hide();
+                jQuery(window).scrollTop(0);
 
                 jQueryel.css({
                     visibility: "visible",
@@ -283,7 +285,7 @@ jQuery(document).ready(function() {
             jQuery("#nbr-overlay").removeClass("open");
             jQuery(".nbr-header-section").removeClass("nbr-menu-active");
         });
-        Barba.Dispatcher.on('newPageReady', function() {
+        Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, rawHTML) {
             initLightbox();
             initGoogleMap();
             initIsotope();

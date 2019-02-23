@@ -31,7 +31,6 @@
                         <img src="<?php echo $image[0]; ?>" alt="<?php echo $gallery->post_title; ?>">
                     </a>
                     <div class="nbr-portfolio-content">
-                    <h2><?php echo $image_size; ?></h2>
                         <p><?php echo $category_name; ?></p>
                         <h3><a href="<?php echo get_permalink( $gallery->ID ) ?>"><?php echo $gallery->post_title; ?></a></h3>
                         <a href="<?php echo get_permalink( $gallery->ID ) ?>" class="nbr-portfolio-link"></a>

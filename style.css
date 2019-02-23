@@ -657,6 +657,8 @@ button {
     line-height: 1.5em;
     color: #1b1b1b;
     font-weight: 700;
+    background: #FFFFFF;
+    padding: 0 5px;
 }
 
 .nbr-portfolio-wrap p {
@@ -665,6 +667,9 @@ button {
     line-height: 1.5em;
     font-weight: 300;
     color: #494949;
+    padding: 0 5px;
+    display: inline-block;
+    background: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1212,7 +1217,7 @@ span.user {
 .nbr-footer-section .brand,
 .nbr-footer-section .brand a {
     font-family: 'Arizonia', cursive;
-    font-size: 42px;
+    font-size: 30px;
     line-height: 1.5em;
     font-weight: 400;
     color: #fff;
@@ -1346,6 +1351,10 @@ span.user {
     .nbr-contact-wrap {
         padding: 30px 0 0 0;
     }
+    .nbr-footer-section .brand,
+    .nbr-footer-section .brand a {
+        font-size: 23px;
+    }
 }
 
 @media all and (max-width: 767px) {
@@ -1442,9 +1451,16 @@ span.user {
     .nbr-page-section {
     padding: 120px 0 40px;
     }
+    .nbr-footer-section .brand,
+    .nbr-footer-section .brand a {
+        font-size: 30px;
+    }
 }
 
 @media all and (max-width: 575px) {
+    .nbr-logo h1 {
+        font-size: 30px;
+    }
     .promo-content {
         text-align: center;
     }
@@ -1485,6 +1501,12 @@ span.user {
         padding: 0;
     }
 
+}
+
+@media all and (max-width: 375px) {
+    .nbr-logo h1 {
+        font-size: 26px;
+    }
 }
 
 /* WpDiscuz Comments Plugin */
