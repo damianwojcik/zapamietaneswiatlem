@@ -1378,9 +1378,6 @@ span.user {
     .xs-padding {
         padding: 15px;
     }
-    .owl-controls {
-        display: none;
-    }
     .nbr-profile-info h2 {
         font-size: 24px;
         line-height: 1.1em;
@@ -1526,4 +1523,9 @@ span.user {
 #slb_viewer_wrap .slb_theme_slb_default .slb_data_title, #slb_viewer_wrap .slb_theme_slb_default .slb_group_status {
     font-family: 'Poppins', sans-serif !important;
     margin-top: 10px;
+}
+
+/* Disable Comments */
+.nocomments {
+    display: none;
 }

@@ -15,6 +15,7 @@
 
 	show_admin_bar(false);
 
+	include( 'includes/disableComments.php' );
 	include( 'includes/assets.php' );
 	include( 'includes/acf.php' );
 	include( 'includes/helpers.php' );
