@@ -25,12 +25,6 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
     acf_add_options_sub_page(array(
-        'page_title' 	=> 'Blog',
-        'menu_title'	=> 'Blog',
-        'parent_slug'	=> 'page-options',
-    ));
-
-    acf_add_options_sub_page(array(
         'page_title' 	=> 'Rekomendacje',
         'menu_title'	=> 'Rekomendacje',
         'parent_slug'	=> 'page-options',
