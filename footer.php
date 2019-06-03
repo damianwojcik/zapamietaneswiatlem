@@ -50,7 +50,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="copright">2019 © <a target="_blank" rel="noopener" href="http://dwojcik.pro/">dwojcik.pro</a></p>
+                    <p class="copyright">2019 © <a target="_blank" rel="noopener" href="http://dwojcik.pro/">dwojcik.pro</a></p>
                 </div>
             </div>
         </div>
